@@ -7,9 +7,7 @@ import dotenv from "dotenv"
 
 // Make sure that dotenv.config(); is placed after all of you import statements
 dotenv.config();
-
 const router = new Navigo("/");
-
 function render(state = store.Home) {
   document.querySelector('#root').innerHTML = `
   ${Header(state)}
@@ -21,10 +19,7 @@ function render(state = store.Home) {
 
   router.updatePageLinks();
 }
-
-
 // add menu toggle to bars icon in nav bar
-
 function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
